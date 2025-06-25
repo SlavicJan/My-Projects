@@ -1,0 +1,25 @@
+table 'среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z'
+	lineageTag: 37c38171-1773-4433-8e5c-19c0d1b66bc9
+
+	column avg
+		dataType: double
+		lineageTag: 94512c34-d448-408b-981f-95843dad477c
+		summarizeBy: sum
+		sourceColumn: avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\среднии_баланс_пользователя_2025-06-24T09_09_18.37133Z.csv"),[Delimiter=";", Columns=1, Encoding=1251, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"avg", type number}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

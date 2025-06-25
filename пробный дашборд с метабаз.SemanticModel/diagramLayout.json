@@ -1,0 +1,217 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 2992,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 86
+          },
+          "nodeIndex": "Результат запроса",
+          "nodeLineageTag": "a72ef800-ac70-4394-b4c4-0602d7beae68",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 86
+          },
+          "nodeIndex": "андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z",
+          "nodeLineageTag": "79f9d5ff-5567-4a43-9ffc-a93bea24bee8",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 74
+          },
+          "nodeIndex": "больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z",
+          "nodeLineageTag": "61e66ea3-9bb8-4a39-9b78-5eb60a2092ac",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 86
+          },
+          "nodeIndex": "за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z",
+          "nodeLineageTag": "67a782ce-79dc-4ba9-90ea-896b00bcf386",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 98
+          },
+          "nodeIndex": "сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z",
+          "nodeLineageTag": "07b9d08d-6395-4796-af39-a693ecf24584",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 98
+          },
+          "nodeIndex": "среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z",
+          "nodeLineageTag": "37c38171-1773-4433-8e5c-19c0d1b66bc9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 98
+          },
+          "nodeIndex": "сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z",
+          "nodeLineageTag": "e22ba6ac-1e93-4561-9e01-818ac2e5b74c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 74
+          },
+          "nodeIndex": "mau_график_2025-06-24T09_17_06 22746Z",
+          "nodeLineageTag": "da6a79f2-9a0b-4479-be54-dcab5d50ac2e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272,
+            "y": 74
+          },
+          "nodeIndex": "график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z",
+          "nodeLineageTag": "afa1911c-56a9-4f61-b909-283f3bb29661",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556,
+            "y": 74
+          },
+          "nodeIndex": "почасовая_активность_2025-06-24T09_32_46 054669Z",
+          "nodeLineageTag": "a8f1f7d6-77bf-40cc-8ae6-d8c2aa10ea50",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840,
+            "y": 0
+          },
+          "nodeIndex": "'Результат запроса$'_xlnm#_FilterDatabase",
+          "nodeLineageTag": "7552b6f3-c3b8-4945-9d30-f900008bb3a5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 0
+          },
+          "nodeIndex": "Результат запроса (2)",
+          "nodeLineageTag": "13540611-b5d3-48df-98ba-edba9f7a2e61",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3408,
+            "y": 0
+          },
+          "nodeIndex": "'Результат запроса$'_xlnm#_FilterDatabase (2)",
+          "nodeLineageTag": "661a9db0-6d6a-4d1d-9d71-da115e3a2994",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3692,
+            "y": 0
+          },
+          "nodeIndex": "Результат запроса (3)",
+          "nodeLineageTag": "311eb0b7-0aa2-4db4-8d4f-54d305b213d8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3976,
+            "y": 0
+          },
+          "nodeIndex": "query_result_2025-06-24T09_48_02 013471Z",
+          "nodeLineageTag": "c15ba9e0-cf3c-40b2-a69b-e75cefc3dd22",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Все таблицы",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": true,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Все таблицы",
+  "defaultDiagram": "Все таблицы"
+}

@@ -1,0 +1,173 @@
+table 'query_result_2025-06-24T09_48_02 013471Z'
+	lineageTag: c15ba9e0-cf3c-40b2-a69b-e75cefc3dd22
+
+	column id
+		dataType: string
+		lineageTag: 327b8a7e-bdd6-4cb6-b29d-8d5b1c4982f3
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column username
+		dataType: string
+		lineageTag: aae27abd-19aa-45c1-aa2e-2893e12d1f83
+		summarizeBy: none
+		sourceColumn: username
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 24f14ac1-8007-403f-bee6-e33cd222692e
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 45cdb0b6-0b8e-453e-b136-fdc17d610c31
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: string
+		lineageTag: 3fd7b097-469a-4dfe-889f-75ea6c15cd3a
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_joined
+		dataType: string
+		lineageTag: 44e52b68-93d5-4923-a4df-08cf9f6b0afb
+		summarizeBy: none
+		sourceColumn: date_joined
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 4b5ea3d8-1ad1-493b-97c5-f56190df6967
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column referal_user
+		dataType: string
+		lineageTag: 51d83794-de6a-4464-80dd-e9393168ec19
+		summarizeBy: none
+		sourceColumn: referal_user
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: string
+		lineageTag: 128ce698-5122-488e-bc4e-e558967381b7
+		summarizeBy: none
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tier
+		dataType: string
+		lineageTag: 450b5ee5-27cd-4396-9888-7b8583d4c7d5
+		summarizeBy: none
+		sourceColumn: tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column score
+		dataType: string
+		lineageTag: fe77ed43-3a80-4546-85a8-1ff3e79fdd42
+		summarizeBy: none
+		sourceColumn: score
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_1
+		dataType: string
+		lineageTag: 275228ed-dba0-4bcd-a7d2-9ae5bf99382d
+		summarizeBy: none
+		sourceColumn: id_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: string
+		lineageTag: 67b6c419-917e-4304-8cf5-c1f5df8792ef
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column code
+		dataType: string
+		lineageTag: ce049038-682f-4070-8add-ac8d74a50c93
+		summarizeBy: none
+		sourceColumn: code
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b4f7b18d-0557-433e-9fb0-b7eb88e010c8
+		summarizeBy: sum
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 064e4c27-11d9-4d9b-83ba-947962c3f446
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_false
+		dataType: int64
+		formatString: 0
+		lineageTag: 6080496a-cfac-47ad-acb4-75ec5cbb1f7e
+		summarizeBy: sum
+		sourceColumn: is_false
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_spent
+		dataType: string
+		lineageTag: cb99c04d-ee51-4e30-9a58-63f39b36e310
+		summarizeBy: none
+		sourceColumn: time_spent
+
+		annotation SummarizationSetBy = Automatic
+
+	column language_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b2ca569-b53e-451e-9b57-14b219517b1b
+		summarizeBy: sum
+		sourceColumn: language_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'query_result_2025-06-24T09_48_02 013471Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\query_result_2025-06-24T09_48_02.013471Z.csv"),[Delimiter=",", Columns=19, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"id", type text}, {"username", type text}, {"first_name", type text}, {"last_name", type text}, {"is_active", type text}, {"date_joined", type text}, {"email", type text}, {"referal_user", type text}, {"company_id", type text}, {"tier", type text}, {"score", type text}, {"id_1", type text}, {"created_at", type text}, {"code", type text}, {"problem_id", Int64.Type}, {"user_id", Int64.Type}, {"is_false", Int64.Type}, {"time_spent", type text}, {"language_id", Int64.Type}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

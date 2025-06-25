@@ -1,0 +1,44 @@
+table 'Результат запроса'
+	isHidden
+	lineageTag: a72ef800-ac70-4394-b4c4-0602d7beae68
+
+	column stage
+		dataType: string
+		isHidden
+		lineageTag: bfb4c981-3fa6-4814-ab21-fca69bf6e169
+		summarizeBy: none
+		sourceColumn: stage
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column count
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bb772708-ec43-4b5a-9bad-48c6910d006b
+		summarizeBy: sum
+		sourceColumn: count
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Результат запроса' = m
+		mode: import
+		source =
+				let
+				    Источник = Excel.Workbook(File.Contents("C:\Users\Slavic Asus\Downloads\воронка_решение___пополнение_кошелька___изменено_2025-06-09T11_28_55.835014Z.xlsx"), null, true),
+				    #"Результат запроса1" = Источник{[Name="Результат запроса"]}[Data],
+				    #"Повышенные заголовки" = Table.PromoteHeaders(#"Результат запроса1", [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"stage", type text}, {"count", Int64.Type}})
+				in
+				    #"Измененный тип"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

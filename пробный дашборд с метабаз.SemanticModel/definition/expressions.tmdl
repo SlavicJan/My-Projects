@@ -1,0 +1,23 @@
+expression 'Ошибки в query_result_2025-06-24T09_48_02 013471Z' =
+		let
+		Источник = #"query_result_2025-06-24T09_48_02 013471Z",
+		  #"Обнаруженные несоответствия типов" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Источник, Table.ColumnsOfType(Источник, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "Тип значения не соответствует типу столбца.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Источник, pairs),
+		  #"Добавлен индекс" = Table.AddIndexColumn(#"Обнаруженные несоответствия типов", "Номер строки" ,1),
+		  #"Сохраненные ошибки" = Table.SelectRowsWithErrors(#"Добавлен индекс", {"id", "username", "first_name", "last_name", "is_active", "date_joined", "email", "referal_user", "company_id", "tier", "score", "id_1", "created_at", "code", "problem_id", "user_id", "is_false", "time_spent", "language_id"}),
+		  #"Переупорядоченные столбцы" = Table.ReorderColumns(#"Сохраненные ошибки", {"Номер строки", "id", "username", "first_name", "last_name", "is_active", "date_joined", "email", "referal_user", "company_id", "tier", "score", "id_1", "created_at", "code", "problem_id", "user_id", "is_false", "time_spent", "language_id"})
+		in
+		  #"Переупорядоченные столбцы"
+	lineageTag: f0dceb70-d649-46eb-b03a-ccb25f3b9ff3
+	queryGroup: 'Ошибки в запросах — 24 06 2025 13:25:52'
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

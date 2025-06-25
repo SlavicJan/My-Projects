@@ -1,0 +1,32 @@
+table 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z'
+	lineageTag: 67a782ce-79dc-4ba9-90ea-896b00bcf386
+
+	column sum
+		dataType: int64
+		formatString: 0
+		lineageTag: 85141b11-9a65-4cf6-b291-255e464e67e1
+		summarizeBy: sum
+		sourceColumn: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 5dcde4c1-ad7a-4024-b03b-b1a5568ea3da
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43.530177Z.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"sum", Int64.Type}, {"description", type text}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

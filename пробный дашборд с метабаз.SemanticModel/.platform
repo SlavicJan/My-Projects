@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "пробный дашборд с метабаз"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dcef999e-b661-4857-b96d-8f8543df5616"
+  }
+}

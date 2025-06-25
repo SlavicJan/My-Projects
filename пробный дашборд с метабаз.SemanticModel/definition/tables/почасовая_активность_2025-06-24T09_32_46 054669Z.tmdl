@@ -1,0 +1,42 @@
+table 'почасовая_активность_2025-06-24T09_32_46 054669Z'
+	lineageTag: a8f1f7d6-77bf-40cc-8ae6-d8c2aa10ea50
+
+	column hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 83303519-22d4-48c7-8d89-beb44c8eaabd
+		summarizeBy: sum
+		sourceColumn: hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column Всех
+		dataType: int64
+		formatString: 0
+		lineageTag: ce8a7f7d-711f-40fc-bd72-6a029b45587c
+		summarizeBy: sum
+		sourceColumn: Всех
+
+		annotation SummarizationSetBy = Automatic
+
+	column Уникальных
+		dataType: int64
+		formatString: 0
+		lineageTag: bf374593-0e42-494e-935b-cb75b653be5e
+		summarizeBy: sum
+		sourceColumn: Уникальных
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'почасовая_активность_2025-06-24T09_32_46 054669Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\почасовая_активность_2025-06-24T09_32_46.054669Z.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"hour", Int64.Type}, {"Всех", Int64.Type}, {"Уникальных", Int64.Type}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

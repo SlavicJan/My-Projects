@@ -1,0 +1,35 @@
+table 'андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z'
+	lineageTag: 79f9d5ff-5567-4a43-9ffc-a93bea24bee8
+
+	column count
+		dataType: int64
+		formatString: 0
+		lineageTag: 14a9e729-d01d-4c50-9548-e14044c91c8d
+		summarizeBy: sum
+		sourceColumn: count
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: bdc1f8c0-3cdd-4089-9b16-05727c732c98
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Json.Document(File.Contents("C:\Users\Slavic Asus\Downloads\андрон_распределение_трат_codecoins_2025-06-09T11_53_26.351031Z.json")),
+				    #"Преобразовано в таблицу" = Table.FromList(Источник, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Развернутый элемент Column1" = Table.ExpandRecordColumn(#"Преобразовано в таблицу", "Column1", {"count", "description"}, {"count", "description"}),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Развернутый элемент Column1",{{"count", Int64.Type}, {"description", type text}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

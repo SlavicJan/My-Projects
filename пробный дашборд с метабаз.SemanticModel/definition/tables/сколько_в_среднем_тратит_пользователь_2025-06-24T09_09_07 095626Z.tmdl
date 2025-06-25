@@ -1,0 +1,25 @@
+table 'сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z'
+	lineageTag: e22ba6ac-1e93-4561-9e01-818ac2e5b74c
+
+	column avg
+		dataType: double
+		lineageTag: 855972b4-2c24-493d-864b-4927fb39d75d
+		summarizeBy: sum
+		sourceColumn: avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07.095626Z.csv"),[Delimiter=";", Columns=1, Encoding=1251, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"avg", type number}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

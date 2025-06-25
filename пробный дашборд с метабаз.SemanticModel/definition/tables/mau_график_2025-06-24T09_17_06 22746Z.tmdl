@@ -1,0 +1,47 @@
+table 'mau_график_2025-06-24T09_17_06 22746Z'
+	lineageTag: da6a79f2-9a0b-4479-be54-dcab5d50ac2e
+
+	column months
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 57658e8d-351a-4ce6-8ed0-1befe353db48
+		summarizeBy: none
+		sourceColumn: months
+
+		variation Изменение
+			isDefault
+			relationship: c0ffea71-dccb-4079-a712-ba45930a1060
+			defaultHierarchy: LocalDateTable_0a6d44f3-246d-479b-8131-3afcc60751ae.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Всех
+		dataType: int64
+		formatString: 0
+		lineageTag: 04b28ff5-f9b9-48c9-af9d-bae44e3b4d0e
+		summarizeBy: sum
+		sourceColumn: Всех
+
+		annotation SummarizationSetBy = Automatic
+
+	column Уникальных
+		dataType: int64
+		formatString: 0
+		lineageTag: 034988bf-2ad5-44c8-a02d-c58754c9c64f
+		summarizeBy: sum
+		sourceColumn: Уникальных
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mau_график_2025-06-24T09_17_06 22746Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\mau_график_2025-06-24T09_17_06.22746Z.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"months", type datetime}, {"Всех", Int64.Type}, {"Уникальных", Int64.Type}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

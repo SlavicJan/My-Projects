@@ -1,0 +1,166 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "9cf217b2dc0805034e26",
+      "config": "{}",
+      "name": "c9652705b06b85e28adb"
+    },
+    {
+      "boundSection": "d7d88cf4652106d14b65",
+      "config": "{}",
+      "name": "d64bf3f138d4a988ec5e"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Страница 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "9cf217b2dc0805034e26",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1178a9480977d54bd0bc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":810.9804184324696,\"y\":0,\"z\":0,\"width\":469.29831320457635,\"height\":362.2653645789712,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\"}],\"Category\":[{\"queryRef\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"а\",\"Entity\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"count\"}},\"Function\":0},\"Name\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\",\"NativeReferenceName\":\"Сумма count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"description\"},\"Name\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\",\"NativeReferenceName\":\"description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'На что пользователи тратят Codecoins'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 362.27,
+          "width": 469.30,
+          "x": 810.98,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"19ad21cb75069a6e0005\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":493.9982244258698,\"height\":362.2653645789712,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.sum)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"з\",\"Entity\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"description\"},\"Name\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.description\",\"NativeReferenceName\":\"description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"sum\"}},\"Function\":0},\"Name\":\"Sum(за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.sum)\",\"NativeReferenceName\":\"Сумма sum\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"sum\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'За что пользователи зарабатывают Codecoins'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 362.27,
+          "width": 494.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"32e83f196ad2aa007c85\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":362.2653645789712,\"z\":5000,\"width\":653.1754300742057,\"height\":358.1487127087556,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"mau_график_2025-06-24T09_17_06 22746Z.months.Изменение.Иерархия дат.Год\",\"active\":true},{\"queryRef\":\"mau_график_2025-06-24T09_17_06 22746Z.months.Изменение.Иерархия дат.Месяц\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(mau_график_2025-06-24T09_17_06 22746Z.Всех)\"},{\"queryRef\":\"Sum(mau_график_2025-06-24T09_17_06 22746Z.Уникальных)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"mau_график_2025-06-24T09_17_06 22746Z\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Name\":\"Изменение\",\"Property\":\"months\"}},\"Hierarchy\":\"Иерархия дат\"}},\"Level\":\"Год\"},\"Name\":\"mau_график_2025-06-24T09_17_06 22746Z.months.Изменение.Иерархия дат.Год\",\"NativeReferenceName\":\"months Год\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Name\":\"Изменение\",\"Property\":\"months\"}},\"Hierarchy\":\"Иерархия дат\"}},\"Level\":\"Месяц\"},\"Name\":\"mau_график_2025-06-24T09_17_06 22746Z.months.Изменение.Иерархия дат.Месяц\",\"NativeReferenceName\":\"months Месяц\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Всех\"}},\"Function\":0},\"Name\":\"Sum(mau_график_2025-06-24T09_17_06 22746Z.Всех)\",\"NativeReferenceName\":\"Сумма Всех\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Уникальных\"}},\"Function\":0},\"Name\":\"Sum(mau_график_2025-06-24T09_17_06 22746Z.Уникальных)\",\"NativeReferenceName\":\"Сумма Уникальных\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'MAU за каждый месяц/ Всех пользователей каждый месяц'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"23D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 358.15,
+          "width": 653.18,
+          "x": 0.00,
+          "y": 362.27,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"48a5561c02cd94a50001\",\"layouts\":[{\"id\":0,\"position\":{\"x\":465,\"y\":120,\"z\":4000,\"width\":317,\"height\":121,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z.avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"с\",\"Entity\":\"сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0},\"Name\":\"Sum(сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z.avg)\",\"NativeReferenceName\":\"Сумма avg\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Сколько в среднем тратит'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 121.00,
+          "width": 317.00,
+          "x": 465.00,
+          "y": 120.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"85f0e4918852c7857b68\",\"layouts\":[{\"id\":0,\"position\":{\"x\":639.453257173487,\"y\":359.52092999882746,\"z\":6000,\"width\":640.8254744635589,\"height\":360.89314728889934,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Всех)\"},{\"queryRef\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Уникальных)\"}],\"Category\":[{\"queryRef\":\"почасовая_активность_2025-06-24T09_32_46 054669Z.hour\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"п\",\"Entity\":\"почасовая_активность_2025-06-24T09_32_46 054669Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Всех\"}},\"Function\":0},\"Name\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Всех)\",\"NativeReferenceName\":\"Сумма Всех\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Уникальных\"}},\"Function\":0},\"Name\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Уникальных)\",\"NativeReferenceName\":\"Сумма Уникальных\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"hour\"},\"Name\":\"почасовая_активность_2025-06-24T09_32_46 054669Z.hour\",\"NativeReferenceName\":\"Сумма hour\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Всех\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Почасовая активность пользователей'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"23D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.89,
+          "width": 640.83,
+          "x": 639.45,
+          "y": 359.52,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"8ebae5e0c1c1bd22025c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":493.9982244258698,\"y\":241.51024305264747,\"z\":3000,\"width\":316.9821940065998,\"height\":120.75512152632373,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z.avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"с\",\"Entity\":\"среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0},\"Name\":\"Sum(среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z.avg)\",\"NativeReferenceName\":\"Сумма avg\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Средний баланс пользователя'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.76,
+          "width": 316.98,
+          "x": 494.00,
+          "y": 241.51,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f1e7bb69b9d53bbb6067\",\"layouts\":[{\"id\":0,\"position\":{\"x\":493.9982244258698,\"y\":0,\"z\":2000,\"width\":316.9821940065998,\"height\":120.75512152632373,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z.avg)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"с\",\"Entity\":\"сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0},\"Name\":\"Sum(сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z.avg)\",\"NativeReferenceName\":\"Сумма avg\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"с\"}},\"Property\":\"avg\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Сколько в среднем зарабатывает пользователь'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.76,
+          "width": 316.98,
+          "x": 494.00,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Страница 1",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"87f780a5312e07aec055\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z\"}},\"Property\":\"name\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 720.00,
+      "name": "d7d88cf4652106d14b65",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"32e4052315a59eecaea5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":575.7142857142858,\"y\":11.428571428571429,\"z\":1000,\"width\":704.2857142857143,\"height\":358.5714285714286,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\"}],\"Category\":[{\"queryRef\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"а\",\"Entity\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"count\"}},\"Function\":0},\"Name\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\",\"NativeReferenceName\":\"Сумма count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"description\"},\"Name\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\",\"NativeReferenceName\":\"description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'На что пользователи тратят Codecoins'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 358.57,
+          "width": 704.29,
+          "x": 575.71,
+          "y": 11.43,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7dee1b4dcb88c531c3f9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":576.3312618301815,\"height\":359.52092999882746,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Category\":[{\"queryRef\":\"Результат запроса.stage\",\"active\":true},{\"queryRef\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\"},{\"queryRef\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.name\"}],\"Y\":[{\"queryRef\":\"Sum(Результат запроса.count)\"}],\"Tooltips\":[{\"queryRef\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\"},{\"queryRef\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.Количество подсказок/решений)\"},{\"queryRef\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.problem_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"р\",\"Entity\":\"Результат запроса\",\"Type\":0},{\"Name\":\"а\",\"Entity\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z\",\"Type\":0},{\"Name\":\"б\",\"Entity\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"р\"}},\"Property\":\"stage\"},\"Name\":\"Результат запроса.stage\",\"NativeReferenceName\":\"stage\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"р\"}},\"Property\":\"count\"}},\"Function\":0},\"Name\":\"Sum(Результат запроса.count)\",\"NativeReferenceName\":\"Сумма count\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"count\"}},\"Function\":0},\"Name\":\"Sum(андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.count)\",\"NativeReferenceName\":\"Сумма count1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"а\"}},\"Property\":\"description\"},\"Name\":\"андрон_распределение_трат_codecoins_2025-06-09T11_53_26 351031Z.description\",\"NativeReferenceName\":\"description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"Количество подсказок/решений\"}},\"Function\":0},\"Name\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.Количество подсказок/решений)\",\"NativeReferenceName\":\"Сумма Количество подсказок/решений\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"name\"},\"Name\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.name\",\"NativeReferenceName\":\"name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"problem_id\"}},\"Function\":0},\"Name\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.problem_id)\",\"NativeReferenceName\":\"Сумма problem_id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"р\"}},\"Property\":\"count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.52,
+          "width": 576.33,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c7ef15481c8ba3e226e9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":574.8306141917178,\"y\":369.69498324486955,\"z\":3000,\"width\":704.4492820976934,\"height\":175.83054081158429,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.sum)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"з\",\"Entity\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"description\"},\"Name\":\"за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.description\",\"NativeReferenceName\":\"description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"sum\"}},\"Function\":0},\"Name\":\"Sum(за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z.sum)\",\"NativeReferenceName\":\"Сумма sum\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"з\"}},\"Property\":\"sum\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'За что пользователи зарабатывают Codecoins'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 175.83,
+          "width": 704.45,
+          "x": 574.83,
+          "y": 369.69,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"da2ab76aae6f69d6ea12\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":370.4986683194024,\"z\":2000,\"width\":576.3312618301815,\"height\":349.91540896832447,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.Количество подсказок/решений)\"},{\"queryRef\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.problem_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"б\",\"Entity\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"name\"},\"Name\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.name\",\"NativeReferenceName\":\"name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"Количество подсказок/решений\"}},\"Function\":0},\"Name\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.Количество подсказок/решений)\",\"NativeReferenceName\":\"Сумма Количество подсказок/решений\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"problem_id\"}},\"Function\":0},\"Name\":\"Sum(больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z.problem_id)\",\"NativeReferenceName\":\"Сумма problem_id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"б\"}},\"Property\":\"Количество подсказок/решений\"}},\"Function\":0}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"47cea20f29e9ca7cd8a8\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z\"}},\"Property\":\"problem_id\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":true}]",
+          "height": 349.92,
+          "width": 576.33,
+          "x": 0.00,
+          "y": 370.50,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e88bd69c7584e084bc7d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":576,\"y\":546,\"width\":703,\"height\":174,\"z\":4000,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"почасовая_активность_2025-06-24T09_32_46 054669Z.hour\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Уникальных)\"},{\"queryRef\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Всех)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"п\",\"Entity\":\"почасовая_активность_2025-06-24T09_32_46 054669Z\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"hour\"},\"Name\":\"почасовая_активность_2025-06-24T09_32_46 054669Z.hour\",\"NativeReferenceName\":\"hour\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Всех\"}},\"Function\":0},\"Name\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Всех)\",\"NativeReferenceName\":\"Сумма Всех\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Уникальных\"}},\"Function\":0},\"Name\":\"Sum(почасовая_активность_2025-06-24T09_32_46 054669Z.Уникальных)\",\"NativeReferenceName\":\"Сумма Уникальных\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"п\"}},\"Property\":\"Уникальных\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"26L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 174.00,
+          "width": 703.00,
+          "x": 576.00,
+          "y": 546.00,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
