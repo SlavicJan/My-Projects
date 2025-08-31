@@ -1,0 +1,61 @@
+table 'public page'
+	lineageTag: a04f6d2c-08d2-4ba5-a9d4-bc3dca3a149a
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: ea75559b-b2dc-4b65-840e-3cc274e0ffc1
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column path
+		dataType: string
+		lineageTag: 4edd8eec-b784-4d58-a5a7-2c80ceff4b60
+		summarizeBy: none
+		sourceColumn: path
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 31a78ac5-50fd-4237-bf51-90ffa913b0d8
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 9c778749-a585-4fc3-9135-ef99b70b0df2
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 7dc58d08-0601-4d76-9a3a-be3085e84960
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column keywords
+		dataType: string
+		lineageTag: b835f503-3eb2-4ab4-9adc-44218355e1c8
+		summarizeBy: none
+		sourceColumn: keywords
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public page' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_page = Источник{[Schema="public",Item="page"]}[Data]
+				in
+				    public_page
+

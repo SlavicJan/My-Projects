@@ -1,0 +1,149 @@
+table 'public problem'
+	lineageTag: bb7540dd-a4b6-4c7e-93cf-2bd75198e96f
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 942815e7-c939-4d17-8594-b5b30b425051
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: d4b0683f-b89f-4477-a05f-9892b8da6ccc
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column complexity
+		dataType: int64
+		formatString: 0
+		lineageTag: 15b087c3-e471-4c32-b302-d444c3b0877c
+		summarizeBy: sum
+		sourceColumn: complexity
+
+		annotation SummarizationSetBy = Automatic
+
+	column bonus
+		dataType: int64
+		formatString: 0
+		lineageTag: 083ca038-b9ff-426e-8b83-d1999e87e31d
+		summarizeBy: sum
+		sourceColumn: bonus
+
+		annotation SummarizationSetBy = Automatic
+
+	column task
+		dataType: string
+		lineageTag: e889a2f9-09f4-4fe5-b3fb-5d779e0a2c38
+		summarizeBy: none
+		sourceColumn: task
+
+		annotation SummarizationSetBy = Automatic
+
+	column solution
+		dataType: string
+		lineageTag: 6860b219-7997-4ed8-8161-19c5f9dbd329
+		summarizeBy: none
+		sourceColumn: solution
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost
+		dataType: int64
+		formatString: 0
+		lineageTag: dbe061db-cbe9-4bba-8134-9c40e9120ae8
+		summarizeBy: sum
+		sourceColumn: cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: double
+		lineageTag: 4147cc7a-61a5-4c88-a593-4705eef718ae
+		summarizeBy: sum
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column page_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 30d4031c-520a-4207-931d-597c2d83c081
+		summarizeBy: sum
+		sourceColumn: page_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column solution_cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fdcd7f5-75ed-477c-ae1e-c9d344e3e228
+		summarizeBy: sum
+		sourceColumn: solution_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column priority
+		dataType: double
+		lineageTag: a63b7b9c-bbf0-4e21-8d5c-6c40ab6f8434
+		summarizeBy: sum
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 209d1299-3e8c-43db-bc8d-d35b28c7b6f5
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b5ae58bd-214f-4ad2-ac76-266fab8d1d54
+		summarizeBy: none
+		sourceColumn: is_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_private
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 56a23051-6ba4-4e45-848f-be68c1045dee
+		summarizeBy: none
+		sourceColumn: is_private
+
+		annotation SummarizationSetBy = Automatic
+
+	column recommendation
+		dataType: string
+		lineageTag: 231e83d3-7f39-471c-b663-afbe43847e52
+		summarizeBy: none
+		sourceColumn: recommendation
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public problem' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_problem = Источник{[Schema="public",Item="problem"]}[Data]
+				in
+				    public_problem
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

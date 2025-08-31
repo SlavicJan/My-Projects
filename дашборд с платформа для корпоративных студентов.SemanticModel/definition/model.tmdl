@@ -1,0 +1,66 @@
+model Model
+	culture: ru-RU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ru-BY
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Ошибки в запросах, загруженных 24.06.2025 13:25:52.
+queryGroup 'Ошибки в запросах — 24 06 2025 13:25:52'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Результат запроса","распределение_трат_codecoins_2025-06-09T11_53_26 351031Z","больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z","за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z","сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z","среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z","сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z","mau_график_2025-06-24T09_17_06 22746Z","график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z","почасовая_активность_2025-06-24T09_32_46 054669Z","query_result_2025-06-24T09_48_02 013471Z","Результат запроса (2)","'Результат запроса$'_xlnm#_FilterDatabase","Результат запроса (3)","'Результат запроса$'_xlnm#_FilterDatabase (2)","Ошибки в query_result_2025-06-24T09_48_02 013471Z","public coderun","public codesubmit","public company","public language","public languagetoproblem","public problem_to_company","public test","public testanswer","public testquestion","public testresult","public teststart","public transaction","public transactiontype","public userentry","public users","public page","public problem"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Результат запроса'
+ref table 'распределение_трат_codecoins_2025-06-09T11_53_26 351031Z'
+ref table 'больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z'
+ref table 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z'
+ref table 'сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z'
+ref table 'среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z'
+ref table 'сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z'
+ref table 'mau_график_2025-06-24T09_17_06 22746Z'
+ref table DateTableTemplate_4d00230c-4349-4d0b-80c2-14d6277742b6
+ref table LocalDateTable_0a6d44f3-246d-479b-8131-3afcc60751ae
+ref table 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'
+ref table 'почасовая_активность_2025-06-24T09_32_46 054669Z'
+ref table 'Результат запроса (2)'
+ref table '''Результат запроса$''_xlnm#_FilterDatabase'
+ref table 'Результат запроса (3)'
+ref table LocalDateTable_ff4754f0-aaa9-4e13-b002-30a7cefcddfd
+ref table LocalDateTable_71a7fd71-e30e-4de6-97f8-f2d5eb74ca17
+ref table '''Результат запроса$''_xlnm#_FilterDatabase (2)'
+ref table 'query_result_2025-06-24T09_48_02 013471Z'
+ref table 'public coderun'
+ref table LocalDateTable_007fd56f-bed7-4385-adae-82cb5414a94e
+ref table 'public codesubmit'
+ref table LocalDateTable_a68c0e97-7431-44b8-9117-153df6297893
+ref table 'public company'
+ref table 'public language'
+ref table 'public languagetoproblem'
+ref table 'public problem_to_company'
+ref table 'public test'
+ref table 'public testanswer'
+ref table 'public testquestion'
+ref table 'public testresult'
+ref table LocalDateTable_4c126b35-a7f9-4d5d-9cbd-468b21286735
+ref table 'public teststart'
+ref table LocalDateTable_fde1494e-5439-4d98-a252-9c61179bfafb
+ref table 'public transaction'
+ref table 'public transactiontype'
+ref table 'public userentry'
+ref table LocalDateTable_2496602d-179f-4f5b-8d8b-370ba9f6cd32
+ref table 'public users'
+ref table LocalDateTable_bfb5d453-410d-48d1-ae9f-a1a50938947c
+ref table 'public page'
+ref table 'public problem'
+
+ref cultureInfo ru-RU
+

@@ -1,0 +1,56 @@
+table 'public testanswer'
+	lineageTag: f050feb2-6828-41d0-a631-cc509db092ba
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 70f191eb-6cc4-4028-8581-a2dbd797baeb
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column option
+		dataType: int64
+		formatString: 0
+		lineageTag: baa397da-f35d-41d5-9171-db6e6e404d94
+		summarizeBy: sum
+		sourceColumn: option
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: string
+		lineageTag: 5dc91520-3331-410c-b9c0-194b2a263b49
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_correct
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: be85b3f6-ebe6-48ce-b5c2-1a77c27eb8f9
+		summarizeBy: none
+		sourceColumn: is_correct
+
+		annotation SummarizationSetBy = Automatic
+
+	column question_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 37b603eb-f0cf-4144-bba0-0ed864ad388a
+		summarizeBy: sum
+		sourceColumn: question_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public testanswer' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_testanswer = Источник{[Schema="public",Item="testanswer"]}[Data]
+				in
+				    public_testanswer
+

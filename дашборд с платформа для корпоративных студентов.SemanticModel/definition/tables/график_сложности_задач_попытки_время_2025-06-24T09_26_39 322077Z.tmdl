@@ -1,0 +1,43 @@
+table 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'
+	lineageTag: afa1911c-56a9-4f61-b909-283f3bb29661
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 74a60adc-0986-4070-aca0-45721dc72c1c
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'попыток решения'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b0089a6-9a48-4ff0-ad67-3c6ba8aee50a
+		summarizeBy: sum
+		sourceColumn: попыток решения
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'потрачано всего времени'
+		dataType: double
+		lineageTag: 99b8d983-cc65-42bc-b255-388616675006
+		summarizeBy: sum
+		sourceColumn: потрачано всего времени
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\график_сложности_задач_попытки_время_2025-06-24T09_26_39.322077Z.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"problem_id", Int64.Type}, {"попыток решения", Int64.Type}, {"потрачано всего времени", type number}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

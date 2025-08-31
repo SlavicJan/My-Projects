@@ -1,0 +1,43 @@
+table 'public languagetoproblem'
+	lineageTag: ae57fae4-4723-4a79-ac07-c4a79e40b8a2
+
+	column ltp_id
+		dataType: int64
+		formatString: 0
+		lineageTag: be2907f3-45aa-4da4-a82e-5919d1568531
+		summarizeBy: sum
+		sourceColumn: ltp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pr_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e8d9df17-2c5d-4108-9369-8998c17cd8fb
+		summarizeBy: sum
+		sourceColumn: pr_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column lang_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e28e2d07-ec79-4fed-b17d-761413093f1b
+		summarizeBy: none
+		sourceColumn: lang_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public languagetoproblem' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_languagetoproblem = Источник{[Schema="public",Item="languagetoproblem"]}[Data]
+				in
+				    public_languagetoproblem
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

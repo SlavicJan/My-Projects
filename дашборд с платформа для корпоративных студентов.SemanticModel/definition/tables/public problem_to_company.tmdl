@@ -1,0 +1,87 @@
+table 'public problem_to_company'
+	lineageTag: 70c169a0-99b3-440c-9ee6-75e714aa3163
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 69e85413-e73d-4775-a434-0e13fea9cfc8
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 5e4561be-a085-4fee-b273-dafbd4ee2b9a
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column task
+		dataType: string
+		lineageTag: 398e1d62-2f80-4264-9a28-4d2a3aa1ccdc
+		summarizeBy: none
+		sourceColumn: task
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 62ce1b7a-9ae8-482b-86cf-d670427f2f2a
+		summarizeBy: sum
+		sourceColumn: cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e17aeaca-5af3-4e30-8735-ebb7feec2ee8
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: fdf91bc4-0f25-4d75-95c5-e3389c78ebf9
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column bonus
+		dataType: int64
+		formatString: 0
+		lineageTag: 09365884-e65c-4060-b2a8-ce2ef6835be0
+		summarizeBy: sum
+		sourceColumn: bonus
+
+		annotation SummarizationSetBy = Automatic
+
+	column priority
+		dataType: double
+		lineageTag: 94cd1b84-2410-4c9a-97a4-68904dcca306
+		summarizeBy: sum
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'public problem_to_company' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_problem_to_company = Источник{[Schema="public",Item="problem_to_company"]}[Data]
+				in
+				    public_problem_to_company
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

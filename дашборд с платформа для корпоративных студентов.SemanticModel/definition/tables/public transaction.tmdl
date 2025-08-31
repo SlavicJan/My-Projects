@@ -1,0 +1,57 @@
+table 'public transaction'
+	lineageTag: e23bc96e-fde6-4baa-9cc2-e6c9c1193f41
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eb51405-3f89-456d-be63-d90895d773aa
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45891426-9323-47e4-b65c-71d3b3be4b77
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: int64
+		formatString: 0
+		lineageTag: 802aa840-6b99-46d8-8648-3b384a3d8138
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	column type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d8a43023-e17f-4261-81d0-9ca477752ddb
+		summarizeBy: none
+		sourceColumn: type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e88dde1-8ca5-4f13-824c-52a4438c11b7
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public transaction' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_transaction = Источник{[Schema="public",Item="transaction"]}[Data]
+				in
+				    public_transaction
+

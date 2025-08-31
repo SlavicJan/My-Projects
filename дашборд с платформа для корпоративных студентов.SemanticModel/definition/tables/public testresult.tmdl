@@ -1,0 +1,79 @@
+table 'public testresult'
+	lineageTag: b3e2a0f3-7bfa-4361-a292-2630ca5f2ac0
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2dc4422a-6ac6-4e78-baa5-85d1c927d471
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 42233a3c-3268-4944-a03e-4a3fdedd6939
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Изменение
+			isDefault
+			relationship: b78e7721-83e9-4717-ab95-73354e8765ec
+			defaultHierarchy: LocalDateTable_4c126b35-a7f9-4d5d-9cbd-468b21286735.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+	column answer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b42fff3-08c2-422b-ab81-9a39fd72bd50
+		summarizeBy: sum
+		sourceColumn: answer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column question_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d7d4b8a-8a9b-45b6-887b-10f24ff9345d
+		summarizeBy: sum
+		sourceColumn: question_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column test_id
+		dataType: int64
+		formatString: 0
+		lineageTag: edc6ea23-40cf-4bb6-9127-1d3d70db5a8f
+		summarizeBy: sum
+		sourceColumn: test_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c971a7b1-b902-4310-b9e0-ba6a35603d64
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: string
+		lineageTag: e1543ba5-52e0-4456-9d29-e92a02536f92
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public testresult' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_testresult = Источник{[Schema="public",Item="testresult"]}[Data]
+				in
+				    public_testresult
+

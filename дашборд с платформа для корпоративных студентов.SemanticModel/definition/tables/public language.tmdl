@@ -1,0 +1,33 @@
+table 'public language'
+	lineageTag: 6d63bb0a-94dc-4c4b-867d-2f3517dda0b0
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 494d4e57-ed47-47a1-a882-4082c71fd37f
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: d3d615df-95f8-4406-b08b-bad228ae8d07
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public language' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_language = Источник{[Schema="public",Item="language"]}[Data]
+				in
+				    public_language
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

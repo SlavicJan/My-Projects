@@ -1,0 +1,112 @@
+table 'public users'
+	lineageTag: 3def764d-0496-44e5-8401-25b5c3a1b6ce
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 31431d47-8451-4327-9e5e-f7378949a9b9
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column username
+		dataType: string
+		lineageTag: 66aae4d7-0033-4c44-af36-911b6592edec
+		summarizeBy: none
+		sourceColumn: username
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 02c2208e-ea84-464b-93f8-fe919341d29d
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 70490b1e-24ff-40fb-a419-362af5f6503a
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: int64
+		formatString: 0
+		lineageTag: 179091aa-5e75-4ae0-acd2-f6e2884d0771
+		summarizeBy: sum
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_joined
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4c3d693a-9c3f-4a8d-b95e-6a9f720e3e29
+		summarizeBy: none
+		sourceColumn: date_joined
+
+		variation Изменение
+			isDefault
+			relationship: 2729092f-4391-4307-a784-0190f7b229e7
+			defaultHierarchy: LocalDateTable_bfb5d453-410d-48d1-ae9f-a1a50938947c.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 66b65c41-6d8f-440c-81c1-dd2f2ff9f578
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column referal_user
+		dataType: int64
+		formatString: 0
+		lineageTag: 07da0c76-8173-4097-b253-3f5d78da9ab5
+		summarizeBy: sum
+		sourceColumn: referal_user
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ac6fe37-5b71-40dd-b147-8790c0ddab79
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tier
+		dataType: int64
+		formatString: 0
+		lineageTag: 7317f8c7-3940-4c65-896b-f4381af86033
+		summarizeBy: sum
+		sourceColumn: tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column score
+		dataType: int64
+		formatString: 0
+		lineageTag: f4cf7d63-6244-4618-b29e-e322cff7aac2
+		summarizeBy: sum
+		sourceColumn: score
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public users' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_users = Источник{[Schema="public",Item="users"]}[Data]
+				in
+				    public_users
+

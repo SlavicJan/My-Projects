@@ -1,0 +1,41 @@
+table 'больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z'
+	lineageTag: 61e66ea3-9bb8-4a39-9b78-5eb60a2092ac
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 98697761-0563-4e12-b268-33288e12ec27
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Количество подсказок/решений'
+		dataType: int64
+		formatString: 0
+		lineageTag: 292cec81-dc7e-4fa1-8f58-f770332684c9
+		summarizeBy: sum
+		sourceColumn: Количество подсказок/решений
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: b2f44ab2-d6ef-4f52-a5bc-b96a8cd7af9e
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35.638551Z.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"problem_id", Int64.Type}, {"Количество подсказок/решений", Int64.Type}, {"name", type text}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

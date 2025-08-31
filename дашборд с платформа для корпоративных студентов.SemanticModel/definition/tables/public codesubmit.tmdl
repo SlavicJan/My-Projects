@@ -1,0 +1,95 @@
+table 'public codesubmit'
+	lineageTag: 09693d89-4c13-46a9-a819-fdf12bed5776
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: dfbccce6-4303-4e1f-bedc-1c5159aefbc9
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aecc08f4-3bcc-4908-b23c-ba97877fe9d6
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Изменение
+			isDefault
+			relationship: 0c5514ce-009d-4099-9a6d-bdf34dffff4d
+			defaultHierarchy: LocalDateTable_a68c0e97-7431-44b8-9117-153df6297893.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+	column code
+		dataType: string
+		lineageTag: cd4a0b19-0720-4ce8-b2a2-9bb8c09a41f1
+		summarizeBy: none
+		sourceColumn: code
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 69fa3358-a039-4f61-94d3-81f32a095cc7
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3acf541f-b2e2-4f5b-a945-c5b20ce2074f
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_false
+		dataType: int64
+		formatString: 0
+		lineageTag: 08cac9b2-2a7a-4d69-b84f-e8ca3be9c792
+		summarizeBy: sum
+		sourceColumn: is_false
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_spent
+		dataType: double
+		lineageTag: a360c395-982e-400e-b618-b2595349171d
+		summarizeBy: sum
+		sourceColumn: time_spent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column language_id
+		dataType: int64
+		formatString: 0
+		lineageTag: fb140a2f-5ad9-4c23-9e6a-cb70e870fbf6
+		summarizeBy: none
+		sourceColumn: language_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public codesubmit' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_codesubmit = Источник{[Schema="public",Item="codesubmit"]}[Data],
+				    #"Замененное значение" = Table.ReplaceValue(public_codesubmit,".",",",Replacer.ReplaceText,{"time_spent"}),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Замененное значение",{{"time_spent", type number}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

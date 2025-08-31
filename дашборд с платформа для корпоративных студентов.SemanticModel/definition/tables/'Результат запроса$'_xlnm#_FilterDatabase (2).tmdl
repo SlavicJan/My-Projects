@@ -1,0 +1,227 @@
+table '''Результат запроса$''_xlnm#_FilterDatabase (2)'
+	isHidden
+	lineageTag: 661a9db0-6d6a-4d1d-9d71-da115e3a2994
+
+	column Column1
+		dataType: string
+		isHidden
+		lineageTag: 317066e6-471b-4d86-9c5e-8988d466d3ef
+		summarizeBy: none
+		sourceColumn: Column1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		isHidden
+		lineageTag: e44a7f6b-f790-4bd7-a3ae-feae808031b5
+		summarizeBy: none
+		sourceColumn: Column2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		isHidden
+		lineageTag: 2e243b48-bbfb-41c3-ba6e-5d3507f958ae
+		summarizeBy: none
+		sourceColumn: Column3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		isHidden
+		lineageTag: 087b3414-00ea-41aa-8d76-e1158a813384
+		summarizeBy: none
+		sourceColumn: Column4
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		isHidden
+		lineageTag: 8757008e-cdcf-4e47-9703-f8927dfae454
+		summarizeBy: none
+		sourceColumn: Column5
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		isHidden
+		lineageTag: 2766e282-cd6e-46da-a7f0-2e51995ce14d
+		summarizeBy: none
+		sourceColumn: Column6
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		isHidden
+		lineageTag: 802d7a35-1fdf-47c3-838a-4ddcb4f10b31
+		summarizeBy: none
+		sourceColumn: Column7
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		isHidden
+		lineageTag: f2f04281-e2b7-4064-b67e-f08b27d355e6
+		summarizeBy: none
+		sourceColumn: Column8
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		isHidden
+		lineageTag: b1ce7654-a8e5-48b3-893c-8be3ee8bbeb7
+		summarizeBy: none
+		sourceColumn: Column9
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		isHidden
+		lineageTag: ca18417d-1c74-4896-9b23-9c4576a8f521
+		summarizeBy: none
+		sourceColumn: Column10
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		isHidden
+		lineageTag: 60337550-4451-403e-a769-e8e416e58a24
+		summarizeBy: none
+		sourceColumn: Column11
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column12
+		dataType: string
+		isHidden
+		lineageTag: f2598b33-78aa-4041-942a-13a5f07590db
+		summarizeBy: none
+		sourceColumn: Column12
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column13
+		dataType: string
+		isHidden
+		lineageTag: 94e434d0-b396-4816-a61c-b86a234ba40c
+		summarizeBy: none
+		sourceColumn: Column13
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column14
+		dataType: string
+		isHidden
+		lineageTag: 7c3b0ea6-c588-491a-9dd8-dd86ee504702
+		summarizeBy: none
+		sourceColumn: Column14
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column15
+		dataType: string
+		isHidden
+		lineageTag: 1ea35382-2e03-40e2-863e-ab1098f7ddc4
+		summarizeBy: none
+		sourceColumn: Column15
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column16
+		dataType: string
+		isHidden
+		lineageTag: 59a5556a-5d01-424e-a2b1-2632ce5aa238
+		summarizeBy: none
+		sourceColumn: Column16
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column17
+		dataType: string
+		isHidden
+		lineageTag: fc89b8ae-d3d2-4d3b-b85b-fec8a985f6c0
+		summarizeBy: none
+		sourceColumn: Column17
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column18
+		dataType: string
+		isHidden
+		lineageTag: d2d9a1e8-eaf3-445e-9297-426032569663
+		summarizeBy: none
+		sourceColumn: Column18
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column19
+		dataType: string
+		isHidden
+		lineageTag: 645727a0-12a7-45e1-92d5-14ee4fb3b4b5
+		summarizeBy: none
+		sourceColumn: Column19
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '''Результат запроса$''_xlnm#_FilterDatabase (2)' = m
+		mode: import
+		source =
+				let
+				    Источник = Excel.Workbook(File.Contents("C:\Users\Slavic Asus\Downloads\query_excel_result_2025-06-24T09_51_41.009478Z.xlsx"), null, true),
+				    #"'Результат запроса$'_xlnm#_FilterDatabase1" = Источник{[Name="'Результат запроса$'_xlnm#_FilterDatabase"]}[Data],
+				    #"Измененный тип" = Table.TransformColumnTypes(#"'Результат запроса$'_xlnm#_FilterDatabase1",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type text}, {"Column14", type text}, {"Column15", type text}, {"Column16", type text}, {"Column17", type text}, {"Column18", type text}, {"Column19", type text}})
+				in
+				    #"Измененный тип"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

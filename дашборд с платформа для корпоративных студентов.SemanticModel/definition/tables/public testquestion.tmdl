@@ -1,0 +1,80 @@
+table 'public testquestion'
+	lineageTag: 5cf146be-278f-4559-8830-07e332849368
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 19576146-fe48-4d1e-b7a9-a3075ee85c0a
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column question_num
+		dataType: int64
+		formatString: 0
+		lineageTag: 834db029-8717-416f-8225-92c2cadf76dc
+		summarizeBy: sum
+		sourceColumn: question_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: string
+		lineageTag: 60cdd263-7d88-497e-938f-f3bc87fb7a5b
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	column tag
+		dataType: string
+		lineageTag: 95558070-1377-4669-8001-5b445ef9afd7
+		summarizeBy: none
+		sourceColumn: tag
+
+		annotation SummarizationSetBy = Automatic
+
+	column test_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c4861d11-0485-4993-8d7c-059dfecc4465
+		summarizeBy: sum
+		sourceColumn: test_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column explanation
+		dataType: string
+		lineageTag: e0a901ee-f4ab-4d40-893a-8bca70850fb9
+		summarizeBy: none
+		sourceColumn: explanation
+
+		annotation SummarizationSetBy = Automatic
+
+	column explanation_cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 6302c732-5bd9-4f19-8ff5-20ab1d8daf5f
+		summarizeBy: sum
+		sourceColumn: explanation_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column type_question
+		dataType: string
+		lineageTag: fcef97b2-661a-4ffc-85e3-e57f89014725
+		summarizeBy: none
+		sourceColumn: type_question
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public testquestion' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_testquestion = Источник{[Schema="public",Item="testquestion"]}[Data]
+				in
+				    public_testquestion
+

@@ -1,0 +1,25 @@
+table 'сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z'
+	lineageTag: 07b9d08d-6395-4796-af39-a693ecf24584
+
+	column avg
+		dataType: double
+		lineageTag: ff637afb-f3bb-46b2-84c4-16fd94fdefda
+		summarizeBy: sum
+		sourceColumn: avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z' = m
+		mode: import
+		source =
+				let
+				    Источник = Csv.Document(File.Contents("C:\Users\Slavic Asus\Downloads\сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36.858418Z.csv"),[Delimiter=";", Columns=1, Encoding=1251, QuoteStyle=QuoteStyle.None]),
+				    #"Повышенные заголовки" = Table.PromoteHeaders(Источник, [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"avg", type number}})
+				in
+				    #"Измененный тип"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,66 @@
+table 'public coderun'
+	lineageTag: 58ace4cc-389a-4506-852a-a3132b7cbce7
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 062be888-cd1f-4ef7-893b-7ecc1a6b871b
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 87b97d22-fdc5-4bda-bdda-10b90a7feabc
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Изменение
+			isDefault
+			relationship: df19d551-b52b-44f7-a040-43c3897a6a23
+			defaultHierarchy: LocalDateTable_007fd56f-bed7-4385-adae-82cb5414a94e.'Иерархия дат'
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_id
+		dataType: int64
+		formatString: 0
+		lineageTag: cbd1186e-bbf0-4891-84fb-5127d3aafd5b
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 70ce5d40-3aac-4fd6-8ef0-29e8b637c6b1
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column language_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 64ad36b4-3ee7-49b7-b69e-218aea5298ab
+		summarizeBy: sum
+		sourceColumn: language_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public coderun' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_coderun = Источник{[Schema="public",Item="coderun"]}[Data]
+				in
+				    public_coderun
+
+	annotation PBI_NavigationStepName = Навигация
+
+	annotation PBI_ResultType = Table
+

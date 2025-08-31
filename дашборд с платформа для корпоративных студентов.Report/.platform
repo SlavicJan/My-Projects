@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "дашборд с платформа для корпоративных студентов"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "87120dad-d99a-457c-838f-d97d8a0256e9"
+  }
+}

@@ -1,0 +1,121 @@
+table 'public transactiontype'
+	lineageTag: a37fee3f-2135-4f33-bc18-d50ddad28e31
+
+	measure ARPU = [Суммарная выручка пользователями]/DISTINCTCOUNT('public transaction'[user_id])
+		lineageTag: 594854ab-625a-41c5-9d85-614970692322
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ARPPU = ```
+			[Суммарная выручка пользователями]/
+			CALCULATE(
+			    DISTINCTCOUNT('public transaction'[user_id]),
+			    'public transaction'[type_id] IN {1, 23, 24, 25, 26, 27, 28}
+			)
+			
+			```
+		lineageTag: 501d22ae-ac43-4acd-a03e-d7c6d367b93c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Количество платящих пользователей' =
+			CALCULATE(
+			    DISTINCTCOUNT('public transaction'[user_id]),
+			    'public transaction'[type_id] IN {1, 23, 24, 25, 26, 27, 28}
+			)
+		formatString: 0
+		lineageTag: 2a165034-9459-42a6-bf36-fd15fa00d04e
+
+	column type
+		dataType: int64
+		formatString: 0
+		lineageTag: 37a9aadb-7060-4d08-bcec-c27091f99ffc
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 049e9298-09da-42df-b2f7-545c656da4e0
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f8a89d1-9729-4d51-ba05-a1813a4272fc
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_visible
+		dataType: int64
+		formatString: 0
+		lineageTag: fd418b52-7989-40cc-814c-6d66d89fa712
+		summarizeBy: none
+		sourceColumn: is_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	column reason
+		dataType: string
+		lineageTag: 05854d29-1e56-423f-a764-4e7b6df0e029
+		summarizeBy: none
+		sourceColumn: reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column icon
+		dataType: string
+		lineageTag: 453d4b09-9ade-4327-aa7b-d1524bfb941c
+		summarizeBy: none
+		sourceColumn: icon
+
+		annotation SummarizationSetBy = Automatic
+
+	column button
+		dataType: string
+		lineageTag: 1a79f8e6-55e2-4b5c-804e-68ed307edbb7
+		summarizeBy: none
+		sourceColumn: button
+
+		annotation SummarizationSetBy = Automatic
+
+	column tooltip
+		dataType: string
+		lineageTag: 4f47502e-196f-42e1-829d-c5e9d87136fd
+		summarizeBy: none
+		sourceColumn: tooltip
+
+		annotation SummarizationSetBy = Automatic
+
+	column destination_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cf0a879-af30-4cca-94c9-14cdac6d9413
+		summarizeBy: none
+		sourceColumn: destination_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column allowed_for
+		dataType: string
+		lineageTag: 90842574-5635-488a-95c2-c5a5cd66ec4a
+		summarizeBy: none
+		sourceColumn: allowed_for
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public transactiontype' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_transactiontype = Источник{[Schema="public",Item="transactiontype"]}[Data]
+				in
+				    public_transactiontype
+

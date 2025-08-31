@@ -1,0 +1,437 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 50,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 4778,
+            "y": 98.5
+          },
+          "nodeIndex": "Результат запроса",
+          "nodeLineageTag": "a72ef800-ac70-4394-b4c4-0602d7beae68",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 5346,
+            "y": 86.5
+          },
+          "nodeIndex": "больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z",
+          "nodeLineageTag": "61e66ea3-9bb8-4a39-9b78-5eb60a2092ac",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 5630,
+            "y": 98.5
+          },
+          "nodeIndex": "за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z",
+          "nodeLineageTag": "67a782ce-79dc-4ba9-90ea-896b00bcf386",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 5914,
+            "y": 110.5
+          },
+          "nodeIndex": "сколько_в_среднем_зарабатывает_пользователь_2025-06-24T09_07_36 858418Z",
+          "nodeLineageTag": "07b9d08d-6395-4796-af39-a693ecf24584",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 6198,
+            "y": 110.5
+          },
+          "nodeIndex": "среднии_баланс_пользователя_2025-06-24T09_09_18 37133Z",
+          "nodeLineageTag": "37c38171-1773-4433-8e5c-19c0d1b66bc9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 6482,
+            "y": 110.5
+          },
+          "nodeIndex": "сколько_в_среднем_тратит_пользователь_2025-06-24T09_09_07 095626Z",
+          "nodeLineageTag": "e22ba6ac-1e93-4561-9e01-818ac2e5b74c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 6766,
+            "y": 86.5
+          },
+          "nodeIndex": "mau_график_2025-06-24T09_17_06 22746Z",
+          "nodeLineageTag": "da6a79f2-9a0b-4479-be54-dcab5d50ac2e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 7050,
+            "y": 86.5
+          },
+          "nodeIndex": "график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z",
+          "nodeLineageTag": "afa1911c-56a9-4f61-b909-283f3bb29661",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 7006.7599934797927,
+            "y": 375.03419929738675
+          },
+          "nodeIndex": "почасовая_активность_2025-06-24T09_32_46 054669Z",
+          "nodeLineageTag": "a8f1f7d6-77bf-40cc-8ae6-d8c2aa10ea50",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 7385.7651566630793,
+            "y": 702.167110515705
+          },
+          "nodeIndex": "'Результат запроса$'_xlnm#_FilterDatabase",
+          "nodeLineageTag": "7552b6f3-c3b8-4945-9d30-f900008bb3a5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 7810.5135465642434,
+            "y": 501.60065490654591
+          },
+          "nodeIndex": "Результат запроса (2)",
+          "nodeLineageTag": "13540611-b5d3-48df-98ba-edba9f7a2e61",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 8134,
+            "y": 365.5
+          },
+          "nodeIndex": "'Результат запроса$'_xlnm#_FilterDatabase (2)",
+          "nodeLineageTag": "661a9db0-6d6a-4d1d-9d71-da115e3a2994",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 7711.2100227848423,
+            "y": 12.5
+          },
+          "nodeIndex": "Результат запроса (3)",
+          "nodeLineageTag": "311eb0b7-0aa2-4db4-8d4f-54d305b213d8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 8754,
+            "y": 12.5
+          },
+          "nodeIndex": "query_result_2025-06-24T09_48_02 013471Z",
+          "nodeLineageTag": "c15ba9e0-cf3c-40b2-a69b-e75cefc3dd22",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 407.33355525785248
+          },
+          "nodeIndex": "public coderun",
+          "nodeLineageTag": "58ace4cc-389a-4506-852a-a3132b7cbce7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 371.33355525785248
+          },
+          "nodeIndex": "public codesubmit",
+          "nodeLineageTag": "09693d89-4c13-46a9-a819-fdf12bed5776",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 383.33355525785248
+          },
+          "nodeIndex": "public company",
+          "nodeLineageTag": "06b552b4-8b6e-4211-b249-6c335c6f7dcd",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 443.33355525785248
+          },
+          "nodeIndex": "public language",
+          "nodeLineageTag": "6d63bb0a-94dc-4c4b-867d-2f3517dda0b0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 431.33355525785248
+          },
+          "nodeIndex": "public languagetoproblem",
+          "nodeLineageTag": "ae57fae4-4723-4a79-ac07-c4a79e40b8a2",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 395.33355525785248
+          },
+          "nodeIndex": "public page",
+          "nodeLineageTag": "a04f6d2c-08d2-4ba5-a9d4-bc3dca3a149a",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272,
+            "y": 357.33355525785248
+          },
+          "nodeIndex": "public problem",
+          "nodeLineageTag": "bb7540dd-a4b6-4c7e-93cf-2bd75198e96f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556,
+            "y": 371.33355525785248
+          },
+          "nodeIndex": "public problem_to_company",
+          "nodeLineageTag": "70c169a0-99b3-440c-9ee6-75e714aa3163",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840,
+            "y": 357.33355525785248
+          },
+          "nodeIndex": "public test",
+          "nodeLineageTag": "2382e277-b726-47a6-b515-85ca2dc7af07",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 407.33355525785248
+          },
+          "nodeIndex": "public testanswer",
+          "nodeLineageTag": "f050feb2-6828-41d0-a631-cc509db092ba",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3408,
+            "y": 371.33355525785248
+          },
+          "nodeIndex": "public testquestion",
+          "nodeLineageTag": "5cf146be-278f-4559-8830-07e332849368",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3692,
+            "y": 383.33355525785248
+          },
+          "nodeIndex": "public testresult",
+          "nodeLineageTag": "b3e2a0f3-7bfa-4361-a292-2630ca5f2ac0",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3976,
+            "y": 419.33355525785248
+          },
+          "nodeIndex": "public teststart",
+          "nodeLineageTag": "fd758c60-699e-41c7-856e-8fbd7ee4a25b",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334,
+            "y": 357.33355525785248
+          },
+          "nodeIndex": "public transaction",
+          "nodeLineageTag": "e23bc96e-fde6-4baa-9cc2-e6c9c1193f41",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 307.33355525785248
+          },
+          "nodeIndex": "public transactiontype",
+          "nodeLineageTag": "a37fee3f-2135-4f33-bc18-d50ddad28e31",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4260,
+            "y": 419.33355525785248
+          },
+          "nodeIndex": "public userentry",
+          "nodeLineageTag": "44d88e92-0b1f-46ec-8277-4a7d5b0f175a",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4544,
+            "y": 357.33355525785248
+          },
+          "nodeIndex": "public users",
+          "nodeLineageTag": "3def764d-0496-44e5-8401-25b5c3a1b6ce",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5062,
+            "y": 98.5
+          },
+          "nodeIndex": "распределение_трат_codecoins_2025-06-09T11_53_26 351031Z",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Все таблицы",
+      "zoomValue": 49.590342827053888,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": true,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Все таблицы",
+  "defaultDiagram": "Все таблицы"
+}

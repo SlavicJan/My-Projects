@@ -1,0 +1,126 @@
+table 'public test'
+	lineageTag: 2382e277-b726-47a6-b515-85ca2dc7af07
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b5697a5-2b08-4d0f-959e-9431b8cc5c08
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 857b98ad-12cf-4903-9159-b2a05e8925b8
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a421d17-61a0-4f46-843b-91603d07da20
+		summarizeBy: sum
+		sourceColumn: page_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 65df47b2-6ffb-4efd-9505-9befc31fe8ab
+		summarizeBy: sum
+		sourceColumn: cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column cover
+		dataType: string
+		lineageTag: 72cdadaa-7023-47b0-bfca-26ef1540974f
+		summarizeBy: none
+		sourceColumn: cover
+
+		annotation SummarizationSetBy = Automatic
+
+	column intro
+		dataType: string
+		lineageTag: 3280f545-5967-406f-98a5-a6d89b344bd4
+		summarizeBy: none
+		sourceColumn: intro
+
+		annotation SummarizationSetBy = Automatic
+
+	column result
+		dataType: string
+		lineageTag: f7a1215e-9086-4cba-98a1-65abf41ff89d
+		summarizeBy: none
+		sourceColumn: result
+
+		annotation SummarizationSetBy = Automatic
+
+	column complexity
+		dataType: int64
+		formatString: 0
+		lineageTag: 5484a33f-f2ba-403e-98e5-01aed90f4574
+		summarizeBy: sum
+		sourceColumn: complexity
+
+		annotation SummarizationSetBy = Automatic
+
+	column priority
+		dataType: double
+		lineageTag: 020e5c64-5357-40ca-afe4-82b704cd763c
+		summarizeBy: sum
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column company_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e402acf-9c92-45ab-bf2d-3085f6f85f8f
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7026ef9e-b577-43a3-9e70-f78ee1b869e9
+		summarizeBy: none
+		sourceColumn: is_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_private
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2003f3fa-7d8f-4c9f-bdba-70c12d8fa041
+		summarizeBy: none
+		sourceColumn: is_private
+
+		annotation SummarizationSetBy = Automatic
+
+	column repeat_cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e53b51e-9605-4c01-9587-e1126f21ee8a
+		summarizeBy: sum
+		sourceColumn: repeat_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public test' = m
+		mode: import
+		source =
+				let
+				    Источник = PostgreSQL.Database("95.163.241.236", "simulative"),
+				    public_test = Источник{[Schema="public",Item="test"]}[Data]
+				in
+				    public_test
+

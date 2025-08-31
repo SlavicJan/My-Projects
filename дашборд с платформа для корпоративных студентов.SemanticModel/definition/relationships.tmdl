@@ -1,0 +1,120 @@
+relationship 4fbec760-7067-6c8e-8672-213b2783dd26
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z'.description
+	toColumn: 'распределение_трат_codecoins_2025-06-09T11_53_26 351031Z'.description
+
+relationship bcfbac9f-38d4-6db9-2dc6-63d5e5bddb56
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z'.sum
+	toColumn: 'распределение_трат_codecoins_2025-06-09T11_53_26 351031Z'.count
+
+relationship c0ffea71-dccb-4079-a712-ba45930a1060
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'mau_график_2025-06-24T09_17_06 22746Z'.months
+	toColumn: LocalDateTable_0a6d44f3-246d-479b-8131-3afcc60751ae.Date
+
+relationship AutoDetected_1c70d742-2fab-4fcc-b9a7-ad0f471db59f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'больше_всего_покупали_подсказок_решении__2025-06-09T12_17_35 638551Z'.problem_id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship 30cb543d-4d0a-4145-9344-0f4903f6d7ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Результат запроса (3)'.date_joined
+	toColumn: LocalDateTable_ff4754f0-aaa9-4e13-b002-30a7cefcddfd.Date
+
+relationship b4f46b0e-eb49-4cd3-a496-1c101ebb3d3a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Результат запроса (3)'.created_at
+	toColumn: LocalDateTable_71a7fd71-e30e-4de6-97f8-f2d5eb74ca17.Date
+
+relationship AutoDetected_593136de-eb88-47f9-a715-005eefaf12f9
+	fromColumn: 'Результат запроса (3)'.problem_id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship df19d551-b52b-44f7-a040-43c3897a6a23
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public coderun'.created_at
+	toColumn: LocalDateTable_007fd56f-bed7-4385-adae-82cb5414a94e.Date
+
+relationship 0c5514ce-009d-4099-9a6d-bdf34dffff4d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public codesubmit'.created_at
+	toColumn: LocalDateTable_a68c0e97-7431-44b8-9117-153df6297893.Date
+
+relationship b78e7721-83e9-4717-ab95-73354e8765ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public testresult'.created_at
+	toColumn: LocalDateTable_4c126b35-a7f9-4d5d-9cbd-468b21286735.Date
+
+relationship 57447937-7401-4dc0-99bb-e5e0db44b2dd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public teststart'.created_at
+	toColumn: LocalDateTable_fde1494e-5439-4d98-a252-9c61179bfafb.Date
+
+relationship a8ac327d-ab1d-4c93-adea-7b0b0dfafbd1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public userentry'.entry_at
+	toColumn: LocalDateTable_2496602d-179f-4f5b-8d8b-370ba9f6cd32.Date
+
+relationship 2729092f-4391-4307-a784-0190f7b229e7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public users'.date_joined
+	toColumn: LocalDateTable_bfb5d453-410d-48d1-ae9f-a1a50938947c.Date
+
+relationship AutoDetected_54ef7c22-dbb9-4c42-bde2-2d6390fc825b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'распределение_трат_codecoins_2025-06-09T11_53_26 351031Z'.description
+	toColumn: 'public transactiontype'.description
+
+relationship AutoDetected_5d37f6f3-0c43-4b78-b6b8-c42351b19117
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'за_что_к_клиенты_зарабатывают_tradecoins_2025-06-24T08_30_43 530177Z'.description
+	toColumn: 'public transactiontype'.description
+
+relationship AutoDetected_f877ab0b-3fdd-4d40-9d44-9b6db2be62df
+	fromColumn: 'public coderun'.problem_id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship AutoDetected_00b99f9b-b623-4e7e-b990-d9ed359ee275
+	fromColumn: 'public codesubmit'.problem_id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship AutoDetected_a38189c7-ff7f-4485-9c6f-ac2fe60fd830
+	fromColumn: 'public problem_to_company'.problem_id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship AutoDetected_360bf524-e0db-4757-9fb3-5148a1e4924c
+	fromColumn: 'public transaction'.type_id
+	toColumn: 'public transactiontype'.type
+
+relationship 89258581-4e6f-db6b-6c7c-5a617dda6873
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'public problem'.id
+	toColumn: 'график_сложности_задач_попытки_время_2025-06-24T09_26_39 322077Z'.problem_id
+
+relationship ab424a0f-3b4e-bca7-cc02-cbe3317a2a9e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'public transaction'.created_at
+	toColumn: 'public codesubmit'.created_at
+
+relationship 25065dcd-803f-e377-f40f-f798a48194cc
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public codesubmit'.language_id
+	toColumn: 'public language'.id
+
+relationship 357589c0-e387-d791-a18b-18eb41de25be
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public languagetoproblem'.lang_id
+	toColumn: 'public language'.id
+

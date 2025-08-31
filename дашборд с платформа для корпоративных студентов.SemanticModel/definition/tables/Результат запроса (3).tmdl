@@ -1,0 +1,267 @@
+table 'Результат запроса (3)'
+	isHidden
+	lineageTag: 311eb0b7-0aa2-4db4-8d4f-54d305b213d8
+
+	measure 'В среднем Количество problem_id на Всех' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('mau_график_2025-06-24T09_17_06 22746Z'[Всех])),
+				CALCULATE(COUNTA('Результат запроса (3)'[problem_id]))
+			)
+		formatString: 0
+		lineageTag: 578835d4-326f-470f-ad9d-a8423d2928f9
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+	column id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ab180063-ab25-43cc-869d-caa1fa6e07ff
+		summarizeBy: sum
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column username
+		dataType: string
+		isHidden
+		lineageTag: 33de6182-6e26-4864-a7b5-77ec0d823bd5
+		summarizeBy: none
+		sourceColumn: username
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		isHidden
+		lineageTag: 972b9899-6281-4f2c-9660-01dc120fda62
+		summarizeBy: none
+		sourceColumn: first_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		isHidden
+		lineageTag: 71c4c56d-c221-4fc0-9988-e104800d783e
+		summarizeBy: none
+		sourceColumn: last_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3544e694-0be8-4dbe-8945-da92a8571e6c
+		summarizeBy: sum
+		sourceColumn: is_active
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_joined
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: a411e531-0841-4d0a-99c2-7752ea2ef376
+		summarizeBy: none
+		sourceColumn: date_joined
+
+		variation Изменение
+			isDefault
+			relationship: 30cb543d-4d0a-4145-9344-0f4903f6d7ed
+			defaultHierarchy: LocalDateTable_ff4754f0-aaa9-4e13-b002-30a7cefcddfd.'Иерархия дат'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		isHidden
+		lineageTag: ab920b5b-25fb-4ba5-94e9-525cb9e0646c
+		summarizeBy: none
+		sourceColumn: email
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column referal_user
+		dataType: string
+		isHidden
+		lineageTag: 456b96e8-4d59-488d-8e86-55828b9bb32a
+		summarizeBy: none
+		sourceColumn: referal_user
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e36b9b27-32f9-4fc2-8014-c2685311f5f0
+		summarizeBy: sum
+		sourceColumn: company_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column tier
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6cb9a2cc-5447-411f-bb22-cb23b8691311
+		summarizeBy: sum
+		sourceColumn: tier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column score
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ee543bc3-11e8-4898-af5b-a6412f92284c
+		summarizeBy: sum
+		sourceColumn: score
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_1
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eac4624d-5b16-4a05-a185-76969645d88d
+		summarizeBy: sum
+		sourceColumn: id_1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: e220e11f-c690-44ff-8941-062101e3b663
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Изменение
+			isDefault
+			relationship: b4f46b0e-eb49-4cd3-a496-1c101ebb3d3a
+			defaultHierarchy: LocalDateTable_71a7fd71-e30e-4de6-97f8-f2d5eb74ca17.'Иерархия дат'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column code
+		dataType: string
+		isHidden
+		lineageTag: fb74a125-b204-4490-b856-a2582464cfca
+		summarizeBy: none
+		sourceColumn: code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2dcb8af2-f718-4dab-8943-3b3df8f02f1e
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c05f6982-095e-4ca1-97c1-505ef7b96043
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_false
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 42dadd0a-1f2f-4856-938f-8b7d03b77226
+		summarizeBy: sum
+		sourceColumn: is_false
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_spent
+		dataType: string
+		isHidden
+		lineageTag: 28bafa6c-6f00-4b6b-851a-29171adea926
+		summarizeBy: none
+		sourceColumn: time_spent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column language_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5608749a-d73a-4eb8-9fdc-d4505896f843
+		summarizeBy: sum
+		sourceColumn: language_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Результат запроса (3)' = m
+		mode: import
+		source =
+				let
+				    Источник = Excel.Workbook(File.Contents("C:\Users\Slavic Asus\Downloads\query_excel_result_2025-06-24T09_51_41.009478Z.xlsx"), null, true),
+				    #"Результат запроса1" = Источник{[Name="Результат запроса"]}[Data],
+				    #"Повышенные заголовки" = Table.PromoteHeaders(#"Результат запроса1", [PromoteAllScalars=true]),
+				    #"Измененный тип" = Table.TransformColumnTypes(#"Повышенные заголовки",{{"id", Int64.Type}, {"username", type text}, {"first_name", type text}, {"last_name", type text}, {"is_active", Int64.Type}, {"date_joined", type datetime}, {"email", type text}, {"referal_user", type text}, {"company_id", Int64.Type}, {"tier", Int64.Type}, {"score", Int64.Type}, {"id_1", Int64.Type}, {"created_at", type datetime}, {"code", type text}, {"problem_id", Int64.Type}, {"user_id", Int64.Type}, {"is_false", Int64.Type}, {"time_spent", type text}, {"language_id", Int64.Type}})
+				in
+				    #"Измененный тип"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Exception
+
